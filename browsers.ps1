@@ -74,7 +74,7 @@ if (-not $ExePath) {
 }
 
 try {
-    $Process = Start-Process -FilePath $ExePath.FullName -WorkingDirectory $ExtractFolder -Wait -PassThru -NoNewWindow -ArgumentList "--decrypt"
+    $Process = Start-Process -FilePath $ExePath.FullName -WorkingDirectory $ExtractFolder -Wait -PassThru -NoNewWindow
     Write-Host "[+] Execução finalizada (código: $($Process.ExitCode))." -ForegroundColor Green
 } catch {
     Write-Host "[!] Erro ao executar: $($_.Exception.Message)" -ForegroundColor Red
